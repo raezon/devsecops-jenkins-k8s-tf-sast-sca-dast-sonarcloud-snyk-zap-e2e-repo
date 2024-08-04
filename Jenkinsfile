@@ -52,7 +52,8 @@ pipeline {
 		   sh 'pwd; sleep 180; echo "Application Has been deployed on K8S"'
 	   	}
 	   }
-	   
+	 }   
+	
 	stage('RunDASTUsingZAP') {
           steps {
 		    withKubeConfig([credentialsId: 'kubelogin']) {
